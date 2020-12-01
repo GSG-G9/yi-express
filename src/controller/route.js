@@ -23,6 +23,6 @@ const getWeather = (req, res) => {
     // req.pipe(stream);
     res.json(data)
 });
-//   res.redirect('/');
+//   res.redirect('/'); 
 };
 module.exports = { getMain, getWeather };
