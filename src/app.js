@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
+require('env2')('server.env');
 const controller = require('./controller');
-const env = require('env2')('server.env');
 
 const app = express();
 
@@ -15,8 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }),
 );
- 
+
 app.use(controller);
 
 module.exports = app;
- 
