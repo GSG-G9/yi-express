@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }),
 );
-
+ 
 app.use(controller);
 
 module.exports = app;

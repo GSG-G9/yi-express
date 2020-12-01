@@ -13,7 +13,7 @@ const getWeather = (req, res) => {
   const createWeatherUrl = (city) => {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
     console.log(url)
-    return url;
+    return url; 
   };
   
   fetch(createWeatherUrl(req.body.city))
