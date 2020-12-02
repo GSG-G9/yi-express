@@ -1,7 +1,12 @@
 const city = document.getElementById('city');
 const submitButton = document.getElementById('submit');
 const div = document.getElementById('div');
-
+const cityName = document.getElementById('city-name');
+const description = document.getElementById('description');
+const temperature = document.getElementById('temp');
+const wind = document.getElementById('wind');
+const pressure = document.getElementById('pressure');
+const icon = document.getElementById('icon');
 submitButton.addEventListener('click', () => {
   fetch('/weather', {
     method: 'post',
@@ -10,7 +15,15 @@ submitButton.addEventListener('click', () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      div.textContent = JSON.stringify(data);
+      cityName.textContent = 'City Name : ' + data.name;
+      description.textContent = 'description : ' + data.weather[0].description;
+      icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      console.log(data.weather[0].icon);
+
+      temperature.textContent = 'tempreture : ' + data.main.temp;
+      pressure.textContent = 'pressure : '+data.main.pressure;
+      wind.textContent = "wind Spped : " + data.wind.speed + "  wind Degree : " +data.wind.deg;
+      // div.textContent = JSON.stringify(data);
     })
     // eslint-disable-next-line no-console
     .catch((err) => console.log(err));

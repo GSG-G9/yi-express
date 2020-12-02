@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>YI-Express</title> 
+    <link rel="stylesheet" href="./style.css"/>
+    <title>weather status</title> 
 </head>
 <body>
-  <h1>Weather YI</h1>  
-    <label>Enter the city name</label>
-    <input id='city' type="text" name="city">
-    <input  id="submit" type="submit" value="Submit"/>
-    <div id='div'></div>
+  <section class="container">
+    <h1 id ="name">Weather YI</h1>  
+    <p> if you want to know any city weather today status we can help you <br> just type city name and all weather information will displayed </p>
+      <label>Enter the city name :</label>
+      <input id='city' type="text" name="city">
+      <input  id="submit" type="submit" value="Submit"/>
+      <div id='div'> Information Will Display Here ..
+        <div id= 'city-name'></div>
+        <div id="description"> </div>
+        <img id = 'icon'>
+        <div id = 'temp'> </div>
+        <div id = "pressure"></div>
+        <div id = 'wind'> </div>
+              </div>
+  </section>
+ 
   <script src='js/main.js'></script>
 </body>
 </html>
