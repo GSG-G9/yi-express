@@ -14,13 +14,12 @@ test('route /anything return 404html page', (done) => {
 });
 
 test('route /weather return gaza weather page', (done) => {
-    request(app)
-      .get('/weather')
-      .expect(200)
-      .end((err, res) => {
-        if (err) return done(err);
-        // eslint-disable-next-line no-console
-       expect(res.body.name).toBe("Gaza")
-        done();
-      });
-  });
+  request(app)
+    .get('/weather')
+    .expect(200)
+    .end((err, res) => {
+      if (err) return done(err);
+      expect(res.body.name).toBe('Gaza');
+      done();
+    });
+});
