@@ -1,6 +1,5 @@
 const city = document.getElementById('city');
 const submitButton = document.getElementById('submit');
-const info = document.getElementById('info');
 const cityName = document.getElementById('city-name');
 const description = document.getElementById('description');
 const temperature = document.getElementById('temp');
@@ -15,7 +14,6 @@ submitButton.addEventListener('click', () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      info.textContent = '';
       cityName.textContent = `City Name : ${data.name}`;
       description.textContent = `description : ${data.weather[0].description}`;
       icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
