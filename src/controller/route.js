@@ -1,4 +1,4 @@
-
+const env = require('env2')('server.env');
 const fetch = require('node-fetch');
 const createWeatherUrl = require('./pure')
 

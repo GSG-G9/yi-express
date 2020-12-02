@@ -1,3 +1,5 @@
+
+const env = require('env2')('server.env');
 const createWeatherUrl = require('../src/controller/pure')
 
 describe("Testing createWeatherUrl it shuold return url when given city name", () => {
