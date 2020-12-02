@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 require('env2')('server.env');
-const controller = require('./controller');
 const favicon = require('serve-favicon');
+const controller = require('./controller');
 
 const app = express();
 app.use(favicon(path.join(__dirname, '..', 'public', 'images', 'favicon.ico')));

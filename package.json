@@ -10,7 +10,7 @@
     "test": "jest",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
-  },
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GSG-G9/yi-express.git"
