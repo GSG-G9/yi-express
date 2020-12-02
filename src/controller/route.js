@@ -13,7 +13,7 @@ const getGazaWeather = (req, res) => {
   fetch(createWeatherUrl('Gaza', process.env.API_KEY))
     .then((response) => response.json())
     .then((data) => res.json(data))
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err));
 };
 
 module.exports = { getWeather, getGazaWeather };

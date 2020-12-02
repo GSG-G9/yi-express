@@ -8,7 +8,7 @@ const controller = require('./controller');
 const app = express();
 app.use(favicon(path.join(__dirname, '..', 'public', 'images', 'favicon.ico')));
 app.disable('x-powered-by');
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 4002);
 
 app.use(compression());
 app.use(express.json());

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {getWeather,getGazaWeather} = require('./route.js');
+const { getWeather, getGazaWeather } = require('./route.js');
 const { error404, error500 } = require('./error.js');
 
 router.post('/weather', getWeather);

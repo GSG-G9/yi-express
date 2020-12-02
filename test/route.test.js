@@ -12,6 +12,17 @@ test('route /anything return 404html page', (done) => {
       done();
     });
 });
+test('router /weather testing ', (done) => {
+  request(app)
+    .post('/weather')
+    .send({city: 'Cairo'})
+    .expect(200)
+    .end((err, res) => {
+      if (err) return done(err);
+      expect(res.body.name).toBe('Cairo');
+      done();
+    });
+});
 
 test('route /weather return gaza weather page', (done) => {
   request(app)
