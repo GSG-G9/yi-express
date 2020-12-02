@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(180deg, #15DF9668.23%, #eee 100%);
+}
+.container{
+    width: 700px;
+    height: 800px;
+    margin: 90px auto;
+    text-align: center;
+
+}
