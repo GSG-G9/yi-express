@@ -1,5 +1,4 @@
 const request = require('supertest');
-const nock = require('nock');
 const app = require('../src/app');
 
 test('route /anything return 404html page', (done) => {
