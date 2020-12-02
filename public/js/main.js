@@ -14,10 +14,10 @@ submitButton.addEventListener('click', () => {
   })
     .then((response) => response.json())
     .then((data) => {
+      icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       cityName.textContent = `City Name : ${data.name}`;
       description.textContent = `description : ${data.weather[0].description}`;
-      icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-      temperature.textContent = `tempreture : ${data.main.temp}`;
+      temperature.textContent = `temperature : ${data.main.temp}`;
       pressure.textContent = `pressure : ${data.main.pressure}`;
       wind.textContent = `wind Speed : ${data.wind.speed}  wind Degree : ${data.wind.deg}`;
     })
