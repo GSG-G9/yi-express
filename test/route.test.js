@@ -1,4 +1,5 @@
 const request = require('supertest');
+const env = require('env2')('server.env');
 const app = require('../src/app');
 
 test('route /anything return 404html page', (done) => {
