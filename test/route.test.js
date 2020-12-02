@@ -1,4 +1,5 @@
 const request = require('supertest');
+const nock = require('nock');
 const app = require('../src/app');
 
 test('route /anything return 404html page', (done) => {
@@ -12,3 +13,15 @@ test('route /anything return 404html page', (done) => {
       done();
     });
 });
+
+test('route /weather return gaza weather page', (done) => {
+    request(app)
+      .get('/weather')
+      .expect(200)
+      .end((err, res) => {
+        if (err) return done(err);
+        // eslint-disable-next-line no-console
+       expect(res.body.name).toBe("Gaza")
+        done();
+      });
+  });
