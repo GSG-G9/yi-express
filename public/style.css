@@ -8,20 +8,19 @@ body {
   background: linear-gradient(180deg, #bfd2eb 30%, rgb(49, 112, 207) 100%);
 }
 nav {
-    background-image: url('./images/weather.jpg');
-    background-size:cover;
-    height: 280px;
+  background-image: url("./images/weather.jpg");
+  background-size: cover;
+  height: 280px;
 }
 
 h1 {
   color: #eee;
   font-family: "Nerko One", cursive;
-  font-size:3em;
+  font-size: 3em;
 }
 
-header p{
- 
-    text-align: center;
+header p {
+  text-align: center;
 }
 .container {
   width: 700px;
@@ -31,17 +30,37 @@ header p{
 }
 
 #city {
-margin-top:20px;
-  width:300px;
+  margin-top: 20px;
+  width: 300px;
+}
+#submit,
+#city {
+  outline: 0;
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+#result {
+  margin: 20px auto;
+  width: 300px;
+  box-shadow: 0 0 25px rgb(28, 124, 111);
+  height: 320px;
+  text-align: center;
+  background-color: #eee;
+}
 
+#result div {
+  padding: 5px;
+  max-height: 30px;
+  margin: 10px auto;
 }
-#submit, #city{
-    outline: 0;
-    padding: 5px;
-    border: 1px solid #fff;
-    border-radius: 10px;
+#result #city-name,
+#temp,
+#wind {
+  background-color: rgb(49, 112, 207);
+  color: #fff;
 }
-#result{
-    margin-top : 20px;
-    
+#result #description,
+#pressure {
+  color: rgb(49, 112, 207);
 }

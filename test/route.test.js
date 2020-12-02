@@ -19,8 +19,18 @@ test('router /weather testing ', (done) => {
     .expect(200)
     .end((err, res) => {
       if (err) return done(err);
-      console.log(res.body);
       expect(res.body.name).toBe('Cairo');
+      done();
+    });
+});
+
+test('route /weather return gaza weather page', (done) => {
+  request(app)
+    .get('/weather')
+    .expect(200)
+    .end((err, res) => {
+      if (err) return done(err);
+      expect(res.body.name).toBe('Gaza');
       done();
     });
 });
