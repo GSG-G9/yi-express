@@ -4,7 +4,7 @@ const createWeatherUrl = require('./pure')
 
 const getWeather = (req, res) => {
 
-  fetch(createWeatherUrl(req.body.city))
+  fetch(createWeatherUrl(req.body.city,process.env.API_KEY))
     .then((response) => response.json())
     .then((data) => res.json(data))
     .catch((err) => console.log(err));

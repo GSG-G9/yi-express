@@ -1,7 +1,7 @@
-const env = require('env2')('server.env');
 
-const createWeatherUrl = (city) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
+
+const createWeatherUrl = (city,key) => {
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
     return url;
   };
 
