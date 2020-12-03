@@ -1,7 +1,7 @@
 {
   "name": "yi-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Heroku link  https://yi-express.herokuapp.com/",
   "main": "index.js",
   "directories": {
     "test": "test"

@@ -1,8 +1,6 @@
 const createWeatherUrl = (city, key) => {
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
   return url;
 };
 
-if (typeof module !== 'undefined') {
-  module.exports = createWeatherUrl;
-}
+module.exports = createWeatherUrl;
